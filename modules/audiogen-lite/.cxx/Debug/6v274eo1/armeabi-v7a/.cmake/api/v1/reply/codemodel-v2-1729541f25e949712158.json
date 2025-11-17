@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6.0"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "audiogen_lite",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "audiogen_lite::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-audiogen_lite-Debug-f16348687a40e9de474e.json",
+					"name" : "audiogen_lite",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/skanda/Documents/NeuroContextOS/cortexn-aura-sapient/modules/audiogen-lite/.cxx/Debug/6v274eo1/armeabi-v7a",
+		"source" : "/home/skanda/Documents/NeuroContextOS/cortexn-aura-sapient/modules/audiogen-lite"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

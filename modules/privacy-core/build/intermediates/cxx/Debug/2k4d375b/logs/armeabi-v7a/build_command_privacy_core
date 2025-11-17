@@ -1,0 +1,4 @@
+/home/skanda/Android/Sdk/cmake/3.22.1/bin/ninja \
+  -C \
+  /home/skanda/Documents/NeuroContextOS/cortexn-aura-sapient/modules/privacy-core/.cxx/Debug/2k4d375b/armeabi-v7a \
+  privacy_core

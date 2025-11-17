@@ -1,0 +1,3 @@
+/home/skanda/Documents/NeuroContextOS/cortexn-aura-sapient/modules/privacy-core/.cxx/Debug/2k4d375b/arm64-v8a/CMakeFiles/privacy_core.dir
+/home/skanda/Documents/NeuroContextOS/cortexn-aura-sapient/modules/privacy-core/.cxx/Debug/2k4d375b/arm64-v8a/CMakeFiles/edit_cache.dir
+/home/skanda/Documents/NeuroContextOS/cortexn-aura-sapient/modules/privacy-core/.cxx/Debug/2k4d375b/arm64-v8a/CMakeFiles/rebuild_cache.dir

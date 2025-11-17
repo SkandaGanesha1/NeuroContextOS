@@ -1,0 +1,5 @@
+-- ARM32 NEON optimizations enabled
+-- OpenMP enabled
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/skanda/Documents/NeuroContextOS/cortexn-aura-sapient/modules/audiogen-lite/.cxx/Debug/6v274eo1/armeabi-v7a

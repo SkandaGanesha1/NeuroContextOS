@@ -1,0 +1,129 @@
+{
+  "version": 6,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 22,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "android-base",
+      "hidden": true,
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/${presetName}",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+        "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/toolchains/android-ndk.cmake"
+      }
+    },
+    {
+      "name": "android-arm64-release",
+      "inherits": "android-base",
+      "displayName": "Android ARM64 Release",
+      "description": "Release build for Android ARM64 (ARMv8-A)",
+      "cacheVariables": {
+        "ANDROID_ABI": "arm64-v8a",
+        "ANDROID_PLATFORM": "android-26",
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_CXX_FLAGS": "-march=armv8.2-a+fp16+dotprod -O3 -DNDEBUG -ffast-math"
+      }
+    },
+    {
+      "name": "android-arm64-debug",
+      "inherits": "android-base",
+      "displayName": "Android ARM64 Debug",
+      "description": "Debug build for Android ARM64",
+      "cacheVariables": {
+        "ANDROID_ABI": "arm64-v8a",
+        "ANDROID_PLATFORM": "android-26",
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_CXX_FLAGS": "-march=armv8.2-a+fp16+dotprod -g -O0 -DDEBUG"
+      }
+    },
+    {
+      "name": "android-armv9-sme2",
+      "inherits": "android-base",
+      "displayName": "Android ARMv9 with SME2",
+      "description": "Release build targeting ARMv9-A with SME2 support",
+      "cacheVariables": {
+        "ANDROID_ABI": "arm64-v8a",
+        "ANDROID_PLATFORM": "android-26",
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_CXX_FLAGS": "-march=armv9-a+sme2 -O3 -DNDEBUG -ffast-math -DHAVE_SME2",
+        "ENABLE_SME2": "ON"
+      }
+    },
+    {
+      "name": "android-armv7-neon",
+      "inherits": "android-base",
+      "displayName": "Android ARMv7 with NEON",
+      "description": "Release build for Android ARMv7 with NEON",
+      "cacheVariables": {
+        "ANDROID_ABI": "armeabi-v7a",
+        "ANDROID_PLATFORM": "android-26",
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_CXX_FLAGS": "-march=armv7-a -mfpu=neon -mfloat-abi=softfp -O3 -DNDEBUG"
+      }
+    },
+    {
+      "name": "fvp-arm64",
+      "inherits": "android-base",
+      "displayName": "Fixed Virtual Platform ARM64",
+      "description": "Build for FVP (Fast Model) simulation",
+      "cacheVariables": {
+        "ANDROID_ABI": "arm64-v8a",
+        "ANDROID_PLATFORM": "android-26",
+        "CMAKE_BUILD_TYPE": "RelWithDebInfo",
+        "CMAKE_CXX_FLAGS": "-march=armv9-a+sme2 -O2 -g -DFVP_BUILD"
+      }
+    },
+    {
+      "name": "benchmark",
+      "inherits": "android-arm64-release",
+      "displayName": "Benchmark Configuration",
+      "description": "Optimized build for microbenchmarks",
+      "cacheVariables": {
+        "BUILD_BENCHMARKS": "ON",
+        "CMAKE_CXX_FLAGS": "-march=armv8.2-a+fp16+dotprod -O3 -DNDEBUG -ffast-math -flto"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "android-arm64-release-build",
+      "configurePreset": "android-arm64-release",
+      "displayName": "Build Android ARM64 Release",
+      "jobs": 8
+    },
+    {
+      "name": "android-armv9-sme2-build",
+      "configurePreset": "android-armv9-sme2",
+      "displayName": "Build Android ARMv9 with SME2",
+      "jobs": 8
+    },
+    {
+      "name": "benchmark-build",
+      "configurePreset": "benchmark",
+      "displayName": "Build Benchmarks",
+      "jobs": 8
+    }
+  ],
+  "testPresets": [
+    {
+      "name": "android-arm64-test",
+      "configurePreset": "android-arm64-release",
+      "displayName": "Run Tests on Android ARM64",
+      "output": {
+        "outputOnFailure": true
+      }
+    }
+  ],
+  "vendor": {
+    "cortexn.com/project": {
+      "projectName": "Cortex-N × SAPIENT × AURA",
+      "description": "On-device ML inference with privacy-preserving federated learning",
+      "maintainer": "Cortex-N Team"
+    }
+  }
+}

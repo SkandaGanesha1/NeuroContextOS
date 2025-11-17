@@ -1,0 +1,5 @@
+# ninja log v5
+2	1221	1763388086219615686	CMakeFiles/audiogen_lite.dir/src/main/cpp/ring_buffer.cpp.o	9464108c3ad8c91d
+0	2238	1763388087235783260	CMakeFiles/audiogen_lite.dir/src/main/cpp/audiogen.cpp.o	923a415454d28486
+3	2488	1763388087482679587	CMakeFiles/audiogen_lite.dir/src/main/cpp/jni_bridge.cpp.o	a0ccb6df71649d85
+2488	2540	1763388087551957543	../../../../build/intermediates/cxx/Debug/6v274eo1/obj/arm64-v8a/libaudiogen_lite.so	67b6ae6975e1767f

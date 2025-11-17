@@ -1,0 +1,1 @@
+/home/skanda/Documents/NeuroContextOS/cortexn-aura-sapient/modules/cortexn-snn/CMakeLists.txt

@@ -1,0 +1,4 @@
+# ninja log v5
+0	1339	1763384477421305025	CMakeFiles/privacy_core.dir/src/main/cpp/seal_jni.cpp.o	7f510055aa31ae96
+1445	1505	1763384477611659093	../../../../build/intermediates/cxx/Debug/2k4d375b/obj/armeabi-v7a/libprivacy_core.so	4e1c3222a28f6fbb
+8	78	1763388059564629821	../../../../build/intermediates/cxx/Debug/2k4d375b/obj/armeabi-v7a/libprivacy_core.so	4e1c3222a28f6fbb
