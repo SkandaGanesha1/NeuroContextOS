@@ -1,0 +1,23 @@
+# Ignore Android SDK & NDK
+Android/Sdk/
+android-ndk-*/
+Android/Sdk/ndk/
+
+# Ignore Gradle wrapper archives
+gradle-wrapper.zip
+
+# Ignore build outputs
+build/
+*/build/
+*.apk
+*.aab
+
+# Ignore local IDE files
+.idea/
+.gradle/
+local.properties
+
+# Ignore temporary / generated files
+*.log
+*.tmp
+*.cache

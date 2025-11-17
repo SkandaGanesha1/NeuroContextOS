@@ -1,2 +1,0 @@
-ninja: Entering directory `/home/skanda/Documents/NeuroContextOS/cortexn-aura-sapient/modules/privacy-core/.cxx/Debug/2k4d375b/armeabi-v7a'
-ninja: no work to do.
