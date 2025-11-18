@@ -16,6 +16,8 @@ import java.io.IOException
 import java.net.*
 import kotlin.coroutines.resume
 import kotlin.coroutines.suspendCoroutine
+import android.net.wifi.WpsInfo
+
 
 /**
  * Wi-Fi Direct Manager for P2P communication in federated learning

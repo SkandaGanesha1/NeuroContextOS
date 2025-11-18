@@ -1,23 +1,109 @@
-# Ignore Android SDK & NDK
+##########################################
+# ANDROID / KOTLIN / PROJECT IGNORE FILE #
+##########################################
+
+# --- ANDROID SDK / NDK (never commit) ---
 Android/Sdk/
 android-ndk-*/
 Android/Sdk/ndk/
+ndk/
 
-# Ignore Gradle wrapper archives
-gradle-wrapper.zip
-
-# Ignore build outputs
+# --- GRADLE BUILD OUTPUTS ---
+.gradle/
 build/
 */build/
+**/build/
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+
+# --- ANDROID ARTIFACTS ---
 *.apk
+*.ap_
 *.aab
+*.aar
 
-# Ignore local IDE files
+# --- INTELLIJ / ANDROID STUDIO ---
 .idea/
-.gradle/
-local.properties
+*.iml
+*.iws
+*.ipr
+captures/
+.navigation/
+caches/
 
-# Ignore temporary / generated files
+# --- LOCAL ENVIRONMENT ---
+local.properties
+.env
+*.keystore
+*.jks
+
+# --- LOGS / TEMPORARY ---
 *.log
 *.tmp
 *.cache
+*.bak
+*.orig
+*.swp
+*.lock
+
+##########################################
+# NDK / CMAKE / C++ BUILD ARTIFACTS      #
+##########################################
+
+# CMake / Ninja
+**/.cxx/
+**/CMakeFiles/
+**/CMakeCache.txt
+**/cmake_install.cmake
+**/CMakeScripts/
+**/build.ninja
+**/.ninja_log
+**/.ninja_deps
+
+# CMake File API
+**/.cmake/
+**/cmake/api/
+**/compile_commands.json
+**/compile_commands.json.bin
+
+# Object / temporary binaries
+**/*.o
+**/*.obj
+**/*.so
+**/*.a
+**/*.out
+**/*.exe
+**/*.dll
+
+# Cache fingerprints
+**/configure_fingerprint.bin
+
+##########################################
+# EXECUTORCH / LOCAL BUILDS / EXTRA      #
+##########################################
+
+executorch/build/
+executorch/.cxx/
+executorch/**/build/
+executorch/**/.cxx/
+
+##########################################
+# ANDROID SPECIFIC GENERATED FILES       #
+##########################################
+
+# Build intermediates
+.intermediates/
+obj/
+output.json
+
+# Lint & Reports
+lint/
+lint-results.xml
+lint-results.html
+
+# Kotlin Build Cache
+.kotlin/
+
+# Misc
+*.class
+*.DS_Store

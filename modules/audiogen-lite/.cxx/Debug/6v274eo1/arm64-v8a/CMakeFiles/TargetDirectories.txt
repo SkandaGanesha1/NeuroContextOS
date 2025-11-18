@@ -1,3 +1,0 @@
-/home/skanda/Documents/NeuroContextOS/cortexn-aura-sapient/modules/audiogen-lite/.cxx/Debug/6v274eo1/arm64-v8a/CMakeFiles/audiogen_lite.dir
-/home/skanda/Documents/NeuroContextOS/cortexn-aura-sapient/modules/audiogen-lite/.cxx/Debug/6v274eo1/arm64-v8a/CMakeFiles/edit_cache.dir
-/home/skanda/Documents/NeuroContextOS/cortexn-aura-sapient/modules/audiogen-lite/.cxx/Debug/6v274eo1/arm64-v8a/CMakeFiles/rebuild_cache.dir

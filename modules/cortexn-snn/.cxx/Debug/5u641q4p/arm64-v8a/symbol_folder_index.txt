@@ -1,1 +1,0 @@
-/home/skanda/Documents/NeuroContextOS/cortexn-aura-sapient/modules/cortexn-snn/build/intermediates/cxx/Debug/5u641q4p/obj/arm64-v8a

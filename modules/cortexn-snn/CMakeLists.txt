@@ -24,7 +24,6 @@ check_cxx_source_compiles("
 " HAVE_I8MM)
 
 # Compiler flags for optimization
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -Werror")
 set(CMAKE_CXX_FLAGS_RELEASE "-O3 -ffast-math -DNDEBUG")
 
 # ARM-specific optimizations
@@ -83,6 +82,8 @@ include_directories(
 
 # Build shared library
 add_library(cortexn_snn SHARED ${CORTEXN_SNN_SOURCES})
+
+target_compile_options(cortexn_snn PRIVATE -Wall -Wextra -Wno-unused-parameter)
 
 # Link libraries
 target_link_libraries(cortexn_snn

@@ -24,7 +24,7 @@ android {
         
         // Native libraries
         ndk {
-            abiFilters.addAll(listOf("arm64-v8a", "armeabi-v7a"))
+            abiFilters.addAll(listOf("arm64-v8a"))
         }
     }
     
@@ -86,12 +86,12 @@ android {
 
 dependencies {
     // Project modules
-    implementation(project(":modules:aura-runtime"))
+    // implementation(project(":modules:aura-runtime"))
     implementation(project(":modules:cortexn-snn"))
     implementation(project(":modules:audiogen-lite"))
     implementation(project(":modules:privacy-core"))
     implementation(project(":modules:agents-vision-yolo"))
-    implementation(project(":modules:agents-asr-whisper"))
+    // implementation(project(":modules:agents-asr-whisper"))
     implementation(project(":modules:agents-predictor"))
     
     // Kotlin

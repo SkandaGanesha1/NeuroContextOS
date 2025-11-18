@@ -97,33 +97,26 @@ class YoloRunner(
             
             // Configure session options
             val sessionOptions = OrtSession.SessionOptions().apply {
-                // Graph optimization
                 setOptimizationLevel(OrtSession.SessionOptions.OptLevel.ALL_OPT)
-                
-                // Thread configuration
+
+                // Threads
                 setIntraOpNumThreads(config.numThreads)
                 setInterOpNumThreads(1)
-                
-                // Memory optimization
+
+                // Memory
                 setMemoryPatternOptimization(true)
                 setCPUArenaAllocator(true)
-                
-                // Enable XNNPACK execution provider
-                addXNNPACK(mapOf(
-                    "intra_op_num_threads" to config.numThreads.toString()
-                ))
-                
-                // GPU acceleration (optional)
+
+                // NNAPI (optional)
                 if (config.useGpu) {
                     try {
-                        addNNAPI()
-                        Timber.i("NNAPI delegate enabled")
+                        addNnapi()
+                        Timber.i("NNAPI enabled")
                     } catch (e: Exception) {
-                        Timber.w(e, "Failed to enable NNAPI, using CPU")
+                        Timber.w(e, "NNAPI not available, falling back to CPU")
                     }
                 }
-                
-                // Execution mode
+
                 setExecutionMode(OrtSession.SessionOptions.ExecutionMode.SEQUENTIAL)
             }
             
@@ -271,28 +264,4 @@ class YoloRunner(
     }
 }
 
-/**
- * Extension to add XNNPACK execution provider
- */
-private fun OrtSession.SessionOptions.addXNNPACK(options: Map<String, String>) {
-    try {
-        val providerOptions = mutableMapOf<String, String>()
-        providerOptions.putAll(options)
-        addExecutionProvider("XNNPACK", providerOptions)
-        Timber.i("XNNPACK execution provider enabled")
-    } catch (e: Exception) {
-        Timber.w(e, "Failed to enable XNNPACK, using default")
-    }
-}
-
-/**
- * Extension to add NNAPI execution provider
- */
-private fun OrtSession.SessionOptions.addNNAPI() {
-    try {
-        addExecutionProvider("NNAPI")
-        Timber.i("NNAPI execution provider enabled")
-    } catch (e: Exception) {
-        throw e
-    }
-}
+// Removed legacy/private execution provider helpers. Use public APIs (addNnapi) and session options instead.
