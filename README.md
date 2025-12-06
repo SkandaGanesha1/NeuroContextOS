@@ -11,6 +11,11 @@ But not all hope is lost.
 
 The **only surviving proof of my work** is the set of **AI models I trained, optimized, and fine-tuned specifically for ARM kernels**. These models represent countless hours of experimentation, architecture design, optimization passes, and benchmark testing.
 
+You can access all my surviving trained and optimized models here:
+
+👉 **Google Drive (ARM-Optimized Models):**  
+**https://drive.google.com/drive/folders/19cTYtDqVdhQr2mbDV30__D80q9fkG9QD?usp=drive_link**
+
 I humbly request you to please evaluate my submission based on:
 
 - The **models I have produced**
@@ -29,3 +34,4 @@ With sincere respect,
 **Omkar Chaithanya**  
 📞 +91 78922 40206  
 📧 omkarchaithanya@gmail.com
+
