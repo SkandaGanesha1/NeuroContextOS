@@ -30,8 +30,9 @@ With sincere respect,
 **Skanda Ganesha L**  
 📞 +91 94833 28789  
 📧 skandaganesha16@gmail.com  
+🔗 LinkedIn: **https://www.linkedin.com/in/skanda-ganesha-41797025a/**
 
 **Omkar Chaithanya**  
 📞 +91 78922 40206  
 📧 omkarchaithanya@gmail.com
-
+🔗 LinkedIn: **https://www.linkedin.com/in/omkar-chaithanya-241911330/** 
