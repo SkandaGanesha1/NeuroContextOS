@@ -35,4 +35,5 @@ With sincere respect,
 **Omkar Chaithanya**  
 📞 +91 78922 40206  
 📧 omkarchaithanya@gmail.com
-\n🔗 LinkedIn: **https://www.linkedin.com/in/omkar-chaithanya-241911330/** 
+
+🔗 LinkedIn: **https://www.linkedin.com/in/omkar-chaithanya-241911330/** 
